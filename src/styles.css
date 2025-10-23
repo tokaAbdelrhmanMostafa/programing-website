@@ -14,7 +14,7 @@
   --bs-dark: #212529;
 }
 *{
-    direction: rtl;
+    /* direction: rtl; */
     margin: 0;
     padding: 0;
 }

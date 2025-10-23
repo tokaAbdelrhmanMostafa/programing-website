@@ -1,47 +1,63 @@
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 px-4">
+  <div class="container-fluid">
 
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 px-4 ">
-  <div class="container">
+    <!-- الشعار -->
+    <a class="navbar-brand fw-bold fs-2" href="#">
 
-   
-    <a class="navbar-brand fw-bold  fs-2" href="#">كمياء</a>
+عوالم تي التعليمية
+    </a>
+ 
 
-   
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- زر التبديل في الشاشات الصغيرة -->
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+      aria-controls="mainNavbar" aria-expanded="!isCollapsed" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-   
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <div class="d-flex w-100 justify-content-between align-items-center">
+    <!-- القائمة -->
+    <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="mainNavbar">
 
-      
-         <div class="flex-grow-1 d-flex justify-content-center">
-        <form class="d-flex  mx-4" role="search" style="width: 400px;">
-          <div class="input-group">
-            <input type="search" class="form-control rounded-start-pill" placeholder="ابحث" aria-label="Search">
-            <button class="btn  rounded-end-pill px-4" type="submit">ابحث</button>
-          </div>
-        </form>
-</div>
-      
-        <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center gap-4">
+      <div class="d-flex w-100 flex-lg-row flex-column align-items-lg-center justify-content-between gap-3">
+
+        <!-- البحث -->
+        <div class="flex-grow-1 d-flex justify-content-lg-center">
+       
+        </div>
+
+        <!-- روابط القائمة -->
+        <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-lg-center flex-column flex-lg-row gap-3">
           <li class="nav-item">
-            <a class="nav-link text-dark" routerLink="/courses">مسارات التعلم</a>
+            <a class="nav-link text-dark" (click)="scrollToSection('service')">الخدمات</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link text-dark" routerLink="/">الصفحه الرئيسيه     </a>
+            <a class="nav-link text-dark"   (click)="scrollToSection('courses')">الباقات</a>
           </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link text-dark" routerLink="/">الصفحة الرئيسية</a>
+          </li> -->
+           <li class="nav-item">
+            <a class="nav-link text-dark" (click)="scrollToSection('headerthree')" >
+              
+            قيمنا 
+            </a>
+          </li>
+
           <li class="nav-item">
+            <a class="nav-link text-dark" (click)="scrollToSection('contact')">
+              
+          تواصل معنا
+            </a>
+          </li>
+          <!-- <li class="nav-item">
             <a class="nav-link text-dark" routerLink="/login">تسجيل دخول</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-outline-primary rounded-pill px-4" routerLink="/signup">إنشاء حساب</a>
-          </li>
+          </li> -->
         </ul>
 
       </div>
     </div>
   </div>
 </nav>
-

@@ -7,7 +7,12 @@ nav{
   
   width: 100%;
   z-index: 1000;
+  
  
+}
+nav a{
+cursor: pointer;
+
 }
 .btn{
   background-color: var(--footer-light-color);
