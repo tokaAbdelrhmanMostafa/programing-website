@@ -26,6 +26,13 @@
 
         <!-- روابط القائمة -->
         <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-lg-center flex-column flex-lg-row gap-3">
+
+           <li class="nav-item">
+            <a class="nav-link text-dark" (click)="scrollToSection('free')">
+
+              حصه مجانيه
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link text-dark" (click)="scrollToSection('service')">الخدمات</a>
           </li>
@@ -49,6 +56,12 @@
           تواصل معنا
             </a>
           </li>
+
+          <!-- <li>
+            <button (click)="switchLanguage('ar')">عربي</button>
+<button (click)="switchLanguage('en')">English</button>
+
+          </li> -->
           <!-- <li class="nav-item">
             <a class="nav-link text-dark" routerLink="/login">تسجيل دخول</a>
           </li>

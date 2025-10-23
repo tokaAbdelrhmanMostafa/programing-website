@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [RouterLink ,NgbCollapseModule ],
+  imports: [NgbCollapseModule ],
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.css'
 })
 export class NavBar {
-  constructor(private router: Router) {}
+  constructor(private router: Router , private translate: TranslateService) {
+    this.translate.addLangs(['ar', 'en']);
+  this.translate.setDefaultLang('ar');
+  }
   isCollapsed = true;
  scrollToSection(sectionId: string) {
   const element = document.getElementById(sectionId);
@@ -19,4 +23,7 @@ export class NavBar {
 }
 
 
+switchLanguage(lang: string) {
+  this.translate.use(lang);
+}
 }

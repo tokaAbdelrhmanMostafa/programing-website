@@ -8,6 +8,8 @@ import { Headerthree } from './AllComponet/home/headerthree/headerthree';
 import { concatWith } from 'rxjs';
 import { Contact } from './AllComponet/home/contact/contact';
 import { Service } from './AllComponet/service/service';
+import { Free } from './AllComponet/free/free';
+import { Free2 } from './AllComponet/free2/free2';
 
 export const routes: Routes = [
     {path:"" ,component:MainHome},
@@ -18,5 +20,7 @@ export const routes: Routes = [
    {path:"header3" , component:Headerthree},
    {path:"contact" , component:Contact},
     {path:"service" , component:Service},
+    {path:"free" , component:Free},
+    {path:"free2",component:Free2}
     
 ];

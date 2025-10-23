@@ -18,3 +18,13 @@
     margin: 0;
     padding: 0;
 }
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="ltr"] body {
+  direction: ltr;
+  text-align: left;
+}
+
